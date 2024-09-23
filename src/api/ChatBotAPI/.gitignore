@@ -1,0 +1,72 @@
+# Build Folders
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.log
+*.tlog
+*.ide
+*.cache
+*.pdb
+*.ilk
+*.meta
+*.tmp
+*.csproj.user
+*.csproj.vspscc
+*.csproj.vssscc
+*.vbproj.user
+*.vbproj.vspscc
+*.vbproj.vssscc
+
+# Visual Studio Code specific files
+.vscode/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Entity Framework
+*.edmx
+*.edmx.diagram
+*.edmx.sql
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code extensions
+.vscode/extensions.json
+.vscode/settings.json
+.vscode/tasks.json
+.vscode/launch.json
+
+# Local History for Visual Studio
+.localhistory/
+
+# Windows crash logs
+*.stackdump
+
+# JetBrains Rider
+.idea/
+*.sln.iml
