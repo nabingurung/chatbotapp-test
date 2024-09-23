@@ -5,15 +5,16 @@ namespace ChatBotAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ChatbotController : ControllerBase
-    {
-        private readonly string _witAiToken = ""; // Replace with your Wit.ai server access token
+    public class ChatbotController(IConfiguration configuration) : ControllerBase
+    { 
+        private  IConfiguration configuration = configuration;
 
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] ChatMessage message)
         {
-            var client = new RestClient("https://api.wit.ai/message");
+       var client = new RestClient("https://api.wit.ai/message");
         var request = new RestRequest();
+        string _witAiToken = configuration["WitToken"];// Replace with your Wit.ai server access token
         request.AddHeader("Authorization", $"Bearer {_witAiToken}");
         request.AddParameter("q", message.Text);
 

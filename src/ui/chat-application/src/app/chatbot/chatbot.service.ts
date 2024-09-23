@@ -7,11 +7,13 @@ import { Observable } from 'rxjs';
 })
 export class ChatbotService {
 
-  private apiUrl = 'http://localhost:5251/api/chatbot'; // .NET Core backend API URL
+  private apiUrl = 'https://localhost:7281/api/chatbot'; // .NET Core backend API URL
 
   constructor(private http: HttpClient) {}
 
   sendMessage(message: string): Observable<any> {
-    return this.http.post<any>(this.apiUrl, { message });
+    const headers = { 'Content-Type': 'application/json' };
+    const body = { text: message };
+    return this.http.post<any>(this.apiUrl, body, { headers });
   }
 }

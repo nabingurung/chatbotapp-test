@@ -15,8 +15,7 @@ export class ChatbotComponent {
   userMessage: string = '';
   messages: { text: string, isUser: boolean }[] = [];
 
-  constructor(private chatbotService: ChatbotService) {}
-
+  constructor(private chatbotService: ChatbotService) { }
   sendMessage() {
     if (this.userMessage.trim()) {
       this.messages.push({ text: this.userMessage, isUser: true });
@@ -27,7 +26,7 @@ export class ChatbotComponent {
       });
 
       // Clear the input field
-      this.userMessage = 'ZXcZc';
+      this.userMessage = '';
     }
   }
 }
